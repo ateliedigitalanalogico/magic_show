@@ -28,14 +28,3 @@ essas silhuetas.
 - `Backup/` — versões numeradas antigas do `.toe` (histórico de save do próprio
   TouchDesigner).
 - `Image/`, `Movie/`, `Audio/`, `Chan/`, `Geo/` — mídia e assets usados pelo patch.
-
-## Autoria
-
-Projeto do **[ateliê digital analógico](https://github.com/ateliedigitalanalogico)**,
-por **Caio Fazolin**.
-
-## Sobre o desenvolvimento
-
-Boa parte da construção do patch teve apoio secundário do **Claude Code**,
-controlando o TouchDesigner ao vivo através do plugin **twozero** (MCP). Ver
-`CLAUDE.md` pra entender como retomar uma sessão de trabalho assim.
