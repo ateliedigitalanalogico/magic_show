@@ -29,8 +29,13 @@ essas silhuetas.
   TouchDesigner).
 - `Image/`, `Movie/`, `Audio/`, `Chan/`, `Geo/` — mídia e assets usados pelo patch.
 
+## Autoria
+
+Projeto do **[ateliê digital analógico](https://github.com/ateliedigitalanalogico)**,
+por **Caio Fazolin**.
+
 ## Sobre o desenvolvimento
 
-Este projeto foi construído em boa parte com o **Claude Code** controlando o
-TouchDesigner ao vivo através do plugin **twozero** (MCP). Ver `CLAUDE.md` pra
-entender como retomar uma sessão de trabalho assim.
+Boa parte da construção do patch teve apoio secundário do **Claude Code**,
+controlando o TouchDesigner ao vivo através do plugin **twozero** (MCP). Ver
+`CLAUDE.md` pra entender como retomar uma sessão de trabalho assim.
