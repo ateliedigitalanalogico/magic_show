@@ -4,6 +4,25 @@ Manual de operação do projeto. Projeto TouchDesigner de uma instalação imers
 com projeção, câmeras (Kinect) captando silhuetas de pessoas, e conteúdos visuais que
 reagem em tempo real a essas silhuetas.
 
+## 📥 Primeira instalação (instalação nova, do zero)
+
+Só faça isso **uma vez**, na primeira vez que for configurar um computador novo. Se o
+projeto já está instalado e é só uma atualização, pule pra próxima seção.
+
+1. Escolha a pasta onde o projeto vai ficar (ex: dentro de Documentos).
+2. Dentro dessa pasta, clique com o botão direito em algum espaço vazio e escolha
+   **"Abrir no Terminal"**.
+3. Digite o comando abaixo e aperte Enter:
+
+   ```
+   git clone https://github.com/ateliedigitalanalogico/magic_show.git
+   ```
+
+4. Espere terminar de baixar. Vai criar uma pasta nova chamada `magic_show` com todo o
+   projeto dentro.
+5. A partir daqui, siga a seção **"Atualizar o projeto"** abaixo sempre que precisar
+   pegar uma versão nova.
+
 ## 🔄 Atualizar o projeto (quando tiver um update novo)
 
 1. Abra a pasta do projeto, onde ela está salva no Windows.
