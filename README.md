@@ -9,7 +9,7 @@ reagem em tempo real a essas silhuetas.
 Só faça isso **uma vez**, na primeira vez que for configurar um computador novo. Se o
 projeto já está instalado e é só uma atualização, pule pra próxima seção.
 
-1. Escolha a pasta onde o projeto vai ficar (ex: dentro de Documentos).
+1. Escolha a pasta onde o projeto vai ficar.
 2. Dentro dessa pasta, clique com o botão direito em algum espaço vazio e escolha
    **"Abrir no Terminal"**.
 3. Digite o comando abaixo e aperte Enter:
