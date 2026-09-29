@@ -1,28 +1,74 @@
 # Magic Show — Sala Imersiva
 
-Projeto TouchDesigner de uma instalação imersiva: sala com projeção, câmeras
-captando silhuetas de pessoas, e conteúdos visuais que reagem em tempo real a
-essas silhuetas.
+Manual de operação do projeto. Projeto TouchDesigner de uma instalação imersiva: sala
+com projeção, câmeras (Kinect) captando silhuetas de pessoas, e conteúdos visuais que
+reagem em tempo real a essas silhuetas.
+
+## 🔄 Atualizar o projeto (quando tiver um update novo)
+
+Sempre que avisarem que tem uma atualização nova, faça isso **antes de abrir o
+TouchDesigner**:
+
+1. Abra a pasta do projeto no Finder (a mesma pasta onde está esse README e o arquivo
+   `.toe`).
+2. Clique com o botão direito em algum espaço vazio dentro da pasta.
+3. Escolha **"Novo Terminal na Pasta"** (no Windows: **"Abrir no Terminal"**).
+4. Na janela do terminal que abrir, digite o comando abaixo e aperte Enter:
+
+   ```
+   git pull
+   ```
+
+5. Espere terminar (aparece uma lista dos arquivos baixados). Pronto — a pasta está
+   atualizada.
+6. Só depois disso, abra o arquivo `.toe` de **maior número** na raiz da pasta (ex:
+   `SALA_IMERSIVA_MAGIC_SHOW.135.toe` — sempre o número mais alto é a versão mais
+   recente).
+
+Se der algum erro no `git pull` (tipo "changes would be overwritten"), **não tente
+resolver sozinho** — chame o suporte técnico antes de continuar, pra não perder nada.
+
+## Tela de operação (Perform Mode)
+
+![Interface do Perform Mode](Docs/perform_mode_ui.png)
+
+- **PREVIEW** (canto superior direito) — visualização 3D da sala, mostra como o
+  conteúdo está ficando nas paredes reais. Botão **HOME** no canto: se alguém mexer na
+  câmera dessa pré-visualização e ela "se perder", clique em HOME pra ela voltar pro
+  lugar certo.
+- **RENDER** (meio direito) — o conteúdo final que está sendo projetado.
+- **SILHUETAS** (embaixo à direita) — a máscara de silhueta captada, é o que os
+  conteúdos usam pra reagir às pessoas na sala.
+- **Painel de parâmetros** (esquerda) — controles do show:
+  - **Conteúdo** — escolhe qual visual está rodando (ou `TIMER` pra trocar sozinho a
+    cada X minutos, ajustável em **Timer (min)**).
+  - **Kinect** — liga/desliga a leitura das câmeras Kinect.
+  - **Silhuetas Overlay** — só liga/desliga a prévia visual da silhueta por cima do
+    RENDER, não afeta a detecção em si.
+  - **Kinect Setup** — clique pra abrir/fechar os ajustes finos de cada sensor Kinect
+    (distância longe/perto, limpeza de ruído, dilatação). Mexer aqui só se as
+    silhuetas estiverem cortando errado ou aparecendo com ruído.
 
 ## Como abrir
 
 - Arquivo principal: **`SALA_IMERSIVA_MAGIC_SHOW.<N>.toe`** — sempre o de **maior
   número** na raiz é a versão atual (versões antigas ficam em `Backup/`).
 - Build do TouchDesigner: **2025.33230**.
-- Antes de mexer em qualquer coisa, ler **`CLAUDE.md`** — tem o estado atual da
-  arquitetura do patch, decisões já tomadas e os "gotchas" já descobertos (evita
-  redescobrir os mesmos bugs).
+- Pra entrar em modo de exibição (tela cheia, sem a interface de edição): aperte
+  **F1**. Pra sair, aperte **Esc**.
+- Antes de mexer em qualquer coisa por dentro do patch, ler **`CLAUDE.md`** — tem o
+  estado técnico do projeto pra quem for editar.
 
 ## Estrutura da pasta
 
 - `SALA_IMERSIVA_MAGIC_SHOW.<N>.toe` — projeto principal (raiz, sempre o mais novo).
-- `CLAUDE.md` — contexto técnico do patch pra retomar o trabalho (arquitetura atual,
-  gotchas de TouchDesigner descobertos, pendências).
+- `CLAUDE.md` — contexto técnico do patch pra retomar o trabalho de desenvolvimento.
+- `Docs/` — imagens e materiais usados neste manual.
 - `Apoio/` — guias de suporte pra migração/infra:
-  - `MIGRACAO_WINDOWS11_KINECT_V1.md` — instalar o SDK do Kinect v1 no Windows 11
-    e configurar 2 sensores no TouchDesigner.
-  - `SSH_CLAUDE_CODE_WINDOWS.md` — ativar OpenSSH no Windows e rodar o Claude Code
-    lá pra controlar o TD remotamente.
+  - `MIGRACAO_WINDOWS11_KINECT_V1.md` — instalar o SDK do Kinect v1 no Windows 11 e
+    configurar os sensores no TouchDesigner.
+  - `SSH_CLAUDE_CODE_WINDOWS.md` — ativar OpenSSH no Windows e rodar o Claude Code lá
+    pra controlar o TD remotamente.
 - `Tox/` — componentes `.tox` avulsos do projeto (incluindo o `twozero.tox`, o MCP
   usado pra controlar o TD via Claude Code).
 - `Backup/` — versões numeradas antigas do `.toe` (histórico de save do próprio
