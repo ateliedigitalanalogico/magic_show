@@ -6,13 +6,9 @@ reagem em tempo real a essas silhuetas.
 
 ## 🔄 Atualizar o projeto (quando tiver um update novo)
 
-Sempre que avisarem que tem uma atualização nova, faça isso **antes de abrir o
-TouchDesigner**:
-
-1. Abra a pasta do projeto no Finder (a mesma pasta onde está esse README e o arquivo
-   `.toe`).
+1. Abra a pasta do projeto, onde ela está salva no Windows.
 2. Clique com o botão direito em algum espaço vazio dentro da pasta.
-3. Escolha **"Novo Terminal na Pasta"** (no Windows: **"Abrir no Terminal"**).
+3. Escolha **"Abrir no Terminal"**.
 4. Na janela do terminal que abrir, digite o comando abaixo e aperte Enter:
 
    ```
@@ -21,9 +17,9 @@ TouchDesigner**:
 
 5. Espere terminar (aparece uma lista dos arquivos baixados). Pronto — a pasta está
    atualizada.
-6. Só depois disso, abra o arquivo `.toe` de **maior número** na raiz da pasta (ex:
-   `SALA_IMERSIVA_MAGIC_SHOW.135.toe` — sempre o número mais alto é a versão mais
-   recente).
+6. Abra o arquivo **`SALA_IMERSIVA_MAGIC_SHOW.toe`** (sem número nenhum no nome) — esse
+   arquivo sempre aponta pra versão mais recente automaticamente, não precisa procurar
+   número nenhum.
 
 Se der algum erro no `git pull` (tipo "changes would be overwritten"), **não tente
 resolver sozinho** — chame o suporte técnico antes de continuar, pra não perder nada.
@@ -51,8 +47,9 @@ resolver sozinho** — chame o suporte técnico antes de continuar, pra não per
 
 ## Como abrir
 
-- Arquivo principal: **`SALA_IMERSIVA_MAGIC_SHOW.<N>.toe`** — sempre o de **maior
-  número** na raiz é a versão atual (versões antigas ficam em `Backup/`).
+- Arquivo principal: **`SALA_IMERSIVA_MAGIC_SHOW.toe`** (sem número) — sempre aponta
+  pra versão mais recente. Os arquivos com número (ex: `.135.toe`) são o histórico de
+  saves do próprio TouchDesigner, ficam guardados mas não precisa abrir eles.
 - Build do TouchDesigner: **2025.33230**.
 - Pra entrar em modo de exibição (tela cheia, sem a interface de edição): aperte
   **F1**. Pra sair, aperte **Esc**.
@@ -61,7 +58,9 @@ resolver sozinho** — chame o suporte técnico antes de continuar, pra não per
 
 ## Estrutura da pasta
 
-- `SALA_IMERSIVA_MAGIC_SHOW.<N>.toe` — projeto principal (raiz, sempre o mais novo).
+- `SALA_IMERSIVA_MAGIC_SHOW.toe` — projeto principal, sempre a versão mais recente
+  (é o arquivo que você deve abrir). O `.<N>.toe` numerado ao lado é só o save mais
+  recente do próprio TouchDesigner, idêntico a esse.
 - `CLAUDE.md` — contexto técnico do patch pra retomar o trabalho de desenvolvimento.
 - `Docs/` — imagens e materiais usados neste manual.
 - `Apoio/` — guias de suporte pra migração/infra:
